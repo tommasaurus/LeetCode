@@ -1,0 +1,20 @@
+class Solution(object):
+    def twoSum(self, numbers, target):
+        """
+        :type numbers: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        index_1 = 0
+        index_2 = len(numbers) - 1
+
+        while True:
+            sum = numbers[index_1] + numbers[index_2]
+            if sum < target:
+                index_1 += 1
+            elif sum > target:
+                index_2 -= 1
+            else:
+                return[index_1 + 1, index_2 + 1]
+
+        
